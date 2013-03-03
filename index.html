@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Anima Dice Roller</title>
+	<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+</head>
+<body>
+<!-- Start of Home (D100) page -->
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>Anima Dice Roller</h1>
+	
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="none" data-icon="star">D100</a></li>
+				<li><a href="#characteristics" data-transition="none">Characteristics</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="content">
+	
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="home_id">Name for D100 Die Roll:</label>
+			<input type="text" name="home_id" id="home_id" placeholder="Name for D100 Die Roll (e.g. Attack Roll, Notice Check, etc.)"/>
+		</div>
+		<p><b>Settings:</b> Please click the appropriate buttons to change your status.</p>
+		<button id="home_luck_button" luck="none">No Luck Advantage/Disadvantage</button>
+		<button id="home_master_button" master="false">Master Disabled</button>
+		<button id="home_openroll_button" openroll="true">Open Rolls Enabled</button>
+		<p>&nbsp;</p>
+		<hr> </hr>
+		<p><b>Roll:</b> Roll for me, Ken-chan! Christian wa Heretic desu!</p> 
+		<button id="home_d100_roll">Roll D100 Dice</button>
+		<p>&nbsp;</p>
+		<p id="home_roll_result"></p>
+	</div>
+
+
+</div>
+<!-- End of Home (D100) page -->
+
+<!-- Start of Characteristics page -->
+<div data-role="page" id="characteristics">
+
+	<div data-role="header">
+		<h1>Anima Dice Roller</h1>
+		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="none">D100</a></li>
+				<li><a href="#startTracking" data-transition="none" data-icon="star">Characteristics</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="content">
+		<p><b>Clicking the button below will randomly generate eight characteristic rolls, replacing the lowest value with a 9. You can then assign these values to whichever characteristics you choose.</b></p>
+		<button id="characteristics_roll_button">Roll Characteristics Dice</button>  		
+	</div>
+
+
+</div><!-- /page -->
+
+</body>
+
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" src="anima-dice-roller.js"></script>
+</html>
