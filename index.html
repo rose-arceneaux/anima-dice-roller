@@ -1,74 +1,71 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+<head>
+	<title>Anima Dice Roller</title>
+	<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+</head>
+<body>
+<!-- Start of Home (D100) page -->
+<div data-role="page" id="home">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="anima-dice-roller : Dice roller for the Anima: Beyond Fantasy RPG." />
+	<div data-role="header">
+		<h1>Anima Dice Roller</h1>
+	
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="none" data-icon="star">D100</a></li>
+				<li><a href="#characteristics" data-transition="none">Characteristics</a></li>
+			</ul>
+		</div>
+	</div>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<div data-role="content">
+	
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="home_id">Name for D100 Die Roll:</label>
+			<input type="text" name="home_id" id="home_id" placeholder="Name for D100 Die Roll (e.g. Attack Roll, Notice Check, etc.)"/>
+		</div>
+		<p><b>Settings:</b> Please click the appropriate buttons to change your status.</p>
+		<button id="home_luck_button" luck="none">No Luck Advantage/Disadvantage</button>
+		<button id="home_master_button" master="false">Master Disabled</button>
+		<button id="home_openroll_button" openroll="true">Open Rolls Enabled</button>
+		<p>&nbsp;</p>
+		<hr> </hr>
+		<p><b>Roll:</b> Roll for me, Ken-chan! Christian wa Heretic desu!</p> 
+		<button id="home_d100_roll">Roll D100 Dice</button>
+		<p>&nbsp;</p>
+		<p id="home_roll_result"></p>
+	</div>
 
-    <title>anima-dice-roller</title>
-  </head>
 
-  <body>
+</div>
+<!-- End of Home (D100) page -->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/rose-arceneaux/anima-dice-roller">View on GitHub</a>
+<!-- Start of Characteristics page -->
+<div data-role="page" id="characteristics">
 
-          <h1 id="project_title">anima-dice-roller</h1>
-          <h2 id="project_tagline">Dice roller for the Anima: Beyond Fantasy RPG.</h2>
+	<div data-role="header">
+		<h1>Anima Dice Roller</h1>
+		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="none">D100</a></li>
+				<li><a href="#startTracking" data-transition="none" data-icon="star">Characteristics</a></li>
+			</ul>
+		</div>
+	</div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/rose-arceneaux/anima-dice-roller/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/rose-arceneaux/anima-dice-roller/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+	<div data-role="content">
+		<p><b>Clicking the button below will randomly generate eight characteristic rolls, replacing the lowest value with a 9. You can then assign these values to whichever characteristics you choose.</b></p>
+		<button id="characteristics_roll_button">Roll Characteristics Dice</button>  		
+	</div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+</div><!-- /page -->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+</body>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">anima-dice-roller maintained by <a href="https://github.com/rose-arceneaux">rose-arceneaux</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" src="anima-dice-roller.js"></script>
 </html>
